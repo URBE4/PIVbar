@@ -1,0 +1,71 @@
+{
+  "version": "1.0.0",
+  "towers": [
+    {
+      "type": "pulse",
+      "name": "Pulse Tower",
+      "color": "#4a90d9",
+      "width": 40,
+      "height": 40,
+      "frameCount": 40,
+      "columnsPerRow": 8,
+      "animationSpeed": 0.05,
+      "spriteSheetUrl": "/assets/towers/pulse-spritesheet.png",
+      "stats": {
+        "damage": 5,
+        "fireRate": 1.2,
+        "range": 140,
+        "cost": { "metal": 100, "energy": 50 }
+      },
+      "description": "Быстрая стрельба, слабый урон"
+    },
+    {
+      "type": "heavy",
+      "name": "Heavy Gun",
+      "color": "#d94a4a",
+      "width": 50,
+      "height": 50,
+      "frameCount": 1,
+      "animationSpeed": 0.1,
+      "stats": {
+        "damage": 25,
+        "fireRate": 1,
+        "range": 80,
+        "cost": { "metal": 50, "energy": 50 }
+      },
+      "description": "Мощный урон, медленная стрельба"
+    },
+    {
+      "type": "missile",
+      "name": "Missile Tower",
+      "color": "#4ad94a",
+      "width": 45,
+      "height": 45,
+      "frameCount": 1,
+      "animationSpeed": 0.1,
+      "stats": {
+        "damage": 40,
+        "fireRate": 1,
+        "range": 150,
+        "cost": { "metal": 120, "energy": 200 }
+      },
+      "description": "Ракеты, большой диапазон"
+    },
+    {
+      "type": "laser",
+      "name": "Heavy Laser",
+      "color": "#d9d94a",
+      "width": 48,
+      "height": 48,
+      "frameCount": 1,
+      "animationSpeed": 0.1,
+      "stats": {
+        "damage": 60,
+        "fireRate": 1.5,
+        "range": 180,
+        "cost": { "metal": 100, "energy": 400 }
+      },
+      "description": "Лазер, наносит урон по времени"
+    }
+  ]
+}

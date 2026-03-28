@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:6
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=bar_td
+
+  server:
+    build: ./server
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URI=mongodb://mongodb:27017/bar_td
+      - CLIENT_URL=http://localhost:8000
+      - JWT_SECRET=your-production-secret
+      - PORT=3000
+    depends_on:
+      - mongodb
+
+  client:
+    image: nginx:alpine
+    ports:
+      - "8000:80"
+    volumes:
+      - ./client:/usr/share/nginx/html
+    depends_on:
+      - server
+
+volumes:
+  mongo_data:

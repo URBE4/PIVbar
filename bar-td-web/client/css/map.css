@@ -1,0 +1,99 @@
+#game-canvas {
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #2a2a4a;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    cursor: crosshair;
+}
+
+#game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 100%);
+    padding: 20px;
+}
+
+.level-info {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 1px solid #2a2a4a;
+}
+
+.level-info h2 {
+    margin: 0 0 10px 0;
+    color: #4ade80;
+    font-size: 1.2rem;
+}
+
+.level-info p {
+    margin: 5px 0;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.base-health-indicator {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 1px solid #2a2a4a;
+}
+
+.health-bar {
+    width: 200px;
+    height: 20px;
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.health-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4ade80, #22c55e);
+    transition: width 0.3s ease;
+}
+
+.health-fill.low {
+    background: linear-gradient(90deg, #fbbf24, #f59e0b);
+}
+
+.health-fill.critical {
+    background: linear-gradient(90deg, #ef4444, #dc2626);
+}
+
+/* Анимация пути */
+@keyframes pathPulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+.path-animated {
+    animation: pathPulse 2s ease-in-out infinite;
+}
+
+/* Подсветка мест для башен */
+.tower-spot {
+    transition: all 0.2s ease;
+}
+
+.tower-spot:hover {
+    filter: brightness(1.3);
+}
+
+.tower-spot.valid {
+    box-shadow: 0 0 10px #4ade80;
+}
+
+.tower-spot.invalid {
+    box-shadow: 0 0 10px #ef4444;
+}

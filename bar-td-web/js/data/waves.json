@@ -1,0 +1,4 @@
+[
+  { "wave": 1, "count": 10, "spawnInterval": 0.8 },
+  { "wave": 2, "count": 15, "spawnInterval": 0.65 }
+]

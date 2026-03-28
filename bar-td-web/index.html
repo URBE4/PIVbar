@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BAR Tower Defense</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <!-- Главное меню -->
+    <div id="main-menu" class="menu-screen">
+        <h1>🏰 BAR Tower Defense</h1>
+        <div class="menu-buttons">
+            <button id="btn-new-game">Новая игра</button>
+            <button id="btn-continue">Продолжить</button>
+            <button id="btn-settings">Настройки</button>
+        </div>
+        <div class="network-controls">
+            <input id="network-username" type="text" placeholder="Никнейм" />
+            <input id="network-room-id" type="text" placeholder="ID комнаты" />
+            <button id="btn-join-room">Присоединиться к комнате</button>
+            <button id="btn-create-room">Создать комнату</button>
+        </div>
+        <div id="save-info"></div>
+    </div>
+
+    <!-- Игровой интерфейс -->
+    <div id="game-ui" class="hidden">
+        <!-- Верхняя панель -->
+        <div id="top-bar">
+            <div class="resource" id="metal-display">
+                <span class="icon">⚙️</span>
+                <span id="metal-value">500</span>
+            </div>
+            <div class="resource" id="energy-display">
+                <span class="icon">⚡</span>
+                <span id="energy-value">1000</span>
+            </div>
+            <div class="wave-info">
+                <span>Волна: </span>
+                <span id="wave-number">1</span>
+            </div>
+            <div class="lives">
+                <span>❤️ </span>
+                <span id="lives-value">20</span>
+            </div>
+            <button id="btn-pause">⏸️</button>
+        </div>
+
+        <!-- Канвас игры -->
+        <canvas id="game-canvas"></canvas>
+
+        <!-- Панель башен -->
+        <div id="tower-panel">
+            <h3>🏗️ Построить</h3>
+            <div id="tower-list"></div>
+        </div>
+
+        <!-- Панель информации -->
+        <div id="info-panel" class="hidden">
+            <h3 id="info-title"></h3>
+            <div id="info-stats"></div>
+            <button id="btn-sell">Продать</button>
+            <button id="btn-upgrade">Улучшить</button>
+        </div>
+
+        <!-- Уведомления -->
+        <div id="notifications"></div>
+    </div>
+
+    <!-- Экран победы/поражения -->
+    <div id="game-over" class="menu-screen hidden">
+        <h1 id="game-over-title"></h1>
+        <p id="game-over-stats"></p>
+        <button id="btn-restart">Заново</button>
+        <button id="btn-menu">В меню</button>
+    </div>
+
+    <!-- Скрипты -->
+    <script type="module" src="js/core/Game.js"></script>
+</body>
+</html>

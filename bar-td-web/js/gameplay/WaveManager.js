@@ -32,6 +32,7 @@ export class WaveManager {
             { enemies: [{ type: 'scout', count: 8 }, { type: 'riot', count: 2 }] },
             { enemies: [{ type: 'scout', count: 10 }, { type: 'gunship', count: 3 }] },
             { enemies: [{ type: 'riot', count: 10 }, { type: 'gunship', count: 5 }] },
+            { enemies: [{ type: 'rascal', count: 15 }] },
             { enemies: [{ type: 'juggernaut', count: 1 }], isBoss: true }
         ];
 

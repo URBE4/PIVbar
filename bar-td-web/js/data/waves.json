@@ -1,4 +1,5 @@
 [
   { "wave": 1, "count": 10, "spawnInterval": 0.8 },
-  { "wave": 2, "count": 15, "spawnInterval": 0.65 }
+  { "wave": 2, "count": 15, "spawnInterval": 0.65 },
+  { "wave": 3, "count": 20, "spawnInterval": 0.5, "unitId": "rascal" }
 ]

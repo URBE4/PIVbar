@@ -110,6 +110,14 @@ export const ENEMY_TYPES = {
         reward: 500,
         type: 'ground',
         color: '#f00'
+    },
+    rascal: {
+        name: 'Rascal',
+        health: 25,
+        speed: 120,
+        reward: 8,
+        type: 'ground',
+        color: '#ff9500'
     }
 };
 

@@ -20,7 +20,7 @@ export class Enemy {
         this.burned = 0;
     }
     
-    update(deltaTime) {
+    update(deltaTime, game) {
         if (this.frozen > 0) {
             this.frozen -= deltaTime;
         }
@@ -74,6 +74,19 @@ export class Enemy {
             ctx.moveTo(this.x + 15, this.y - 15);
             ctx.lineTo(this.x - 15, this.y + 15);
             ctx.stroke();
+        }
+        
+        if (this.type === 'rascal') {
+            ctx.strokeStyle = '#ff9500';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, 14, 0, Math.PI * 2);
+            ctx.stroke();
+            
+            ctx.fillStyle = '#ff9500';
+            ctx.font = 'bold 10px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('⚡', this.x, this.y - 25);
         }
     }
 }
